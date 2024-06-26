@@ -1,3 +1,24 @@
 ---
-$END$
+const {className: classes} = Astro.props;
 ---
+<div class={classes+" "+" justify-center content-center justify-items-center"}>
+    <div class="flex flex-grow justify-center content-center justify-items-center px-24">
+
+       <div class="w-50 h-fit overflow-hidden rounded-full bg-gradient-radial from-alice_blue-500 to-alice_blue-100">
+        <img class="w-72 h-auto drop-shadow-lg backdrop-blur" src={"/avatar-color.png"} alt="Avatar"/>
+       </div>
+        <div class="px-12 w-full">
+            <h1 class="text-alice_blue-400 text-3xl py-2">Daniel Chaviano Pérez</h1>
+            <h1 class="text-alice_blue text-lg py-2">Software Engineer</h1>
+            <p class="text-alice_blue text-lg text-wrap py-4">
+                Backend developer,interested in AI ,
+                Frontend Development, Algorithm Designing,
+                Software Architecture
+            </p>
+            <p class="text-alice_blue text-lg">
+                Also likes music,planes,photography,design.
+            </p>
+        </div>
+    </div>
+
+</div>
