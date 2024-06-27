@@ -1,0 +1,14 @@
+{
+  "cSpell.words": [
+    "alloc",
+    "ampproject",
+    "astro",
+    "astrojs",
+    "Chaviano",
+    "Knowlege",
+    "tailwindcss"
+  ],
+  "files.associations": {
+  "*.css": "tailwindcss"
+}
+}
