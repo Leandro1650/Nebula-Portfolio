@@ -2,13 +2,17 @@
 const { className: classes } = Astro.props;
 ---
 
-<div class={classes + " justify-center content-center justify-items-center"}>
+<div
+  class={classes +
+    " justify-center content-center justify-items-center align-middle"}
+>
+  <!-- w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 -->
   <div
-    class="gradient mx-auto bg-center fixed -z-50
-    w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80
+    class="gradient fixed top-0 mx-auto -z-50
+    w-full h-full
     bg-gradient-to-r blur-3xl
-    from-medium_slate_blue-400 to-lavender_pink-400
-    dark:from-medium_slate_blue-200 dark:to-lavender_pink-200"
+    from-medium_slate_blue-800 to-lavender_pink-800
+    dark:from-medium_slate_blue-100 dark:to-lavender_pink-100"
   >
   </div>
 
@@ -16,30 +20,35 @@ const { className: classes } = Astro.props;
     class="flex flex-col mx-auto justify-center content-center
     justify-items-center items-center md:flex-row lg:px-24"
   >
+    <!-- Square 1 -->
     <div
-      class="w-40 h-40 sm:w-64 sm:h-64 lg:w-72 lg:h-72 overflow-hidden rounded-full
-      bg-gradient-radial from-alice_blue-500 to-alice_blue-100"
+      class="w-28 h-24 rounded-3xl shadow-sm shadow-alice_blue-400 m-3 bg-naples_yellow-500 text-russian_violet-100 flex items-center justify-center"
     >
-      <img
-        class="w-40 h-40 sm:w-64 sm:h-64 lg:w-72 lg:h-72 drop-shadow-lg backdrop-blur"
-        src={"/avatar-color.png"}
-        alt="Avatar"
-      />
+      naples_yellow
     </div>
-    <div class="px-12 xs:w-full sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-4/12">
-      <h1 class="text-alice_blue-400 text-center text-3xl py-2">
-        Daniel Chaviano Pérez
-      </h1>
-      <h1 class="text-naples_yellow text-center text-lg py-2">
-        Software Engineer
-      </h1>
-      <p class="text-alice_blue text-center text-lg text-wrap py-4">
-        Backend developer, interested in AI, Frontend Development, Algorithm
-        Designing, Software Architecture.
-      </p>
-      <p class="text-lavender_pink-600 text-center text-xs">
-        Also likes music,planes,photography,design.
-      </p>
+    <!-- Square 2 -->
+    <div
+      class="w-28 h-24 rounded-3xl shadow-sm shadow-alice_blue-400 m-3 bg-lavender_pink-500 text-russian_violet-100 flex items-center justify-center"
+    >
+      lavender_pink
+    </div>
+    <!-- Square 3 -->
+    <div
+      class="w-28 h-24 rounded-3xl shadow-sm shadow-alice_blue-400 m-3 bg-alice_blue-500 text-russian_violet-100 flex items-center justify-center"
+    >
+      alice_blue
+    </div>
+    <!-- Square 4 -->
+    <div
+      class="w-28 h-24 rounded-3xl shadow-sm shadow-alice_blue-400 m-3 bg-medium_slate_blue-500 text-russian_violet-100 flex items-center justify-center"
+    >
+      slate_blue
+    </div>
+    <!-- Square 5 -->
+    <div
+      class="w-28 h-24 rounded-3xl shadow-sm shadow-alice_blue-400 m-3 bg-russian_violet-500 text-alice_blue-500 flex items-center justify-center"
+    >
+      russian_violet
     </div>
   </div>
 </div>
