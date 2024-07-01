@@ -30,6 +30,13 @@
   border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
 }
 
+.grid {
+  background-image:
+    repeating-linear-gradient(#ccc 0 1px, transparent 1px 100%),
+    repeating-linear-gradient(90deg, #ccc 0 1px, transparent 1px 100%);
+  background-size: 71px 71px;
+}
+
 * {
   @apply transition-all;
 }
