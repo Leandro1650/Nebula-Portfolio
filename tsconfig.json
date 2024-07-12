@@ -1,6 +1,21 @@
 {
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["src/assets/*"],
+      "@config/*": ["src/config/*"],
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      // "@constants": ["src/constants"],
+      // "@services/*": ["src/services/*"],
+      // "@types/*": ["src/types/*"],
+      // "@images/*": ["src/assets/images/*"],
+      // "@videos/*": ["src/assets/videos/*"],
+      "@/*": ["src/*"]
+    }
   }
 }

@@ -1,13 +1,23 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
+import { BaseHead, Header, Footer } from "@/components/base";
 
-import {SITE_DESCRIPTION, SITE_TITLE} from "../consts";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@config/siteData";
 ---
+
+<!doctype html>
 <html lang="en">
-<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}></BaseHead>
-<body class="bg-primary dark:bg-dark">
-<main>
-    <slot/>
-</main>
-</body>
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  <body class="dark:bg-dark">
+    <slot name="header">
+      <Header />
+    </slot>
+
+    <main>
+      <slot />
+    </main>
+
+    <slot name="footer">
+      <Footer />
+    </slot>
+  </body>
 </html>
