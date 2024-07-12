@@ -1,83 +1,57 @@
 ---
-const { className: classes } = Astro.props;
+import { Icon } from "astro-icon/components";
+
+import { Button } from "@components/ui";
 ---
 
-<div
-  class={classes +
-    " justify-center content-center justify-items-center align-middle flex"}
->
-  <!-- w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 -->
-
+<div class="relative h-screen py-20">
+  <!-- Background nebula -->
   <div
-    class="absolute w-screen h-full
-  overflow-hidden -z-50 justify-center content-center justify-items-center align-middle flex"
+    class="absolute w-full h-full top-0 left-0 overflow-hidden -z-50 justify-center content-center justify-items-center align-middle flex"
   >
     <div
-      class="gradient right-1/2
-    w-1/2 h-3/4
-    bg-gradient-to-r blur-3xl
-    overflow-hidden
-    from-alice_blue-500 to-lavender_pink-700
-    dark:from-medium_slate_blue-100 dark:to-lavender_pink-100"
+      class="gradient right-1/2 w-1/2 h-3/4 bg-gradient-to-r blur-3xl overflow-hidden from-alice_blue-500 to-lavender_pink-700 dark:from-medium_slate_blue-100 dark:to-lavender_pink-100"
     >
     </div>
   </div>
 
   <div
-    class="flex flex-col mx-auto justify-center content-center
-    justify-items-center items-center md:flex-row lg:px-24"
+    class="flex flex-col gap-4 mx-auto justify-center content-center justify-items-center items-center md:flex-row lg:px-24"
   >
+    <Button text="Click me" type="button" variant="secondary" />
     <button
       onclick="(() => document.body.classList.toggle('dark'))()"
-      class="h-12 w-12 rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+      class="rounded-lg p-2 bg-gray-200 dark:bg-gray-700 dark:text-white"
     >
-      <svg
-        class="fill-violet-700 block dark:hidden"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
-        <path
-          d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-        ></path>
-      </svg>
-      <svg
-        class="fill-yellow-500 hidden dark:block"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
-        <path
-          d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-          fill-rule="evenodd"
-          clip-rule="evenodd"></path>
-      </svg>
+      <Icon name="tabler/sun" class="size-6" />
     </button>
     <!-- Square 1 -->
     <div
-      class="w-28 h-24 rounded-3xl shadow-sm shadow-alice_blue-400 m-3 bg-naples_yellow-500 text-russian_violet-100 flex items-center justify-center"
+      class="w-28 h-24 rounded-3xl shadow-sm shadow-alice_blue-400 bg-naples_yellow-500 text-russian_violet-100 flex items-center justify-center"
     >
       naples_yellow
     </div>
     <!-- Square 2 -->
     <div
-      class="w-28 h-24 rounded-3xl shadow-sm shadow-alice_blue-400 m-3 bg-lavender_pink-500 text-russian_violet-100 flex items-center justify-center"
+      class="w-28 h-24 rounded-3xl shadow-sm shadow-alice_blue-400 bg-lavender_pink-500 text-russian_violet-100 flex items-center justify-center"
     >
       lavender_pink
     </div>
     <!-- Square 3 -->
     <div
-      class="w-28 h-24 rounded-3xl shadow-sm shadow-alice_blue-400 m-3 bg-alice_blue-500 text-russian_violet-100 flex items-center justify-center"
+      class="w-28 h-24 rounded-3xl shadow-sm shadow-alice_blue-400 bg-alice_blue-500 text-russian_violet-100 flex items-center justify-center"
     >
       alice_blue
     </div>
     <!-- Square 4 -->
     <div
-      class="w-28 h-24 rounded-3xl shadow-sm shadow-alice_blue-400 m-3 bg-medium_slate_blue-500 text-russian_violet-100 flex items-center justify-center"
+      class="w-28 h-24 rounded-3xl shadow-sm shadow-alice_blue-400 bg-medium_slate_blue-500 text-russian_violet-100 flex items-center justify-center"
     >
       slate_blue
     </div>
     <!-- Square 5 -->
     <div
-      class="w-28 h-24 rounded-3xl shadow-sm shadow-alice_blue-400 m-3 bg-russian_violet-500 text-alice_blue-500 flex items-center justify-center"
+      class="w-28 h-24 rounded-3xl shadow-sm shadow-alice_blue-400 bg-russian_violet-500 text-alice_blue-500 flex items-center justify-center"
     >
       russian_violet
     </div>
