@@ -1,0 +1,35 @@
+---
+import { Button } from "../ui";
+import type { TimelineProps } from "./types";
+
+interface Props extends TimelineProps {}
+
+const { data } = Astro.props;
+---
+
+<div class="py-5 px-5 sm:px-10 lg:px-14 xl:px-20 flex justify-center">
+  <div
+    class="pl-5 border-slate-400 border-l flex flex-col justify-center gap-5"
+  >
+    {
+      data.map((item) => (
+        <div>
+          <span class="block text-slate-500 relative before:absolute before:-left-7 before:top-1 before:rounded-full before:bg-slate-400 before:w-4 before:h-4">
+            {item.date}
+          </span>
+          <h2 class="text-xl font-bold dark:text-white">{item.title}</h2>
+          <p class="text-slate-600 dark:text-white mt-1">{item.subTitle}</p>
+
+          {item.action && (
+            <Button
+              class="mt-4"
+              href={item.action}
+              text="Learn more"
+              variant="secondary"
+            />
+          )}
+        </div>
+      ))
+    }
+  </div>
+</div>
